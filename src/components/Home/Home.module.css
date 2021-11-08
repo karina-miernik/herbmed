@@ -1,0 +1,74 @@
+.home {
+  background-color: #fff;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
+  padding-top: 5rem;
+  justify-content: center;
+}
+.title,
+.titleTwo {
+  color: #6b705c;
+  letter-spacing: 0.15rem;
+  font-size: 2rem;
+  text-align: center;
+}
+.titleTwo {
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.titleTwo:hover {
+  text-decoration: none;
+  color: #6b705c;
+  transition: ease-in;
+  transition-duration: 0.2s;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35%;
+  margin: 0 1rem 0;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 0px 29px -13px rgba(107, 112, 92, 1);
+  -moz-box-shadow: 0px 0px 29px -13px rgba(107, 112, 92, 1);
+  box-shadow: 0px 0px 29px -13px rgba(107, 112, 92, 1);
+}
+.container:hover {
+  transform: translateY(-10px);
+  transition: ease-in;
+  transition-duration: 0.2s;
+}
+.imageOne,
+.imageTwo {
+  display: flex;
+  background-repeat: no-repeat;
+  width: 40vw;
+  height: 50vh;
+  border-radius: 0.5rem;
+  background-size: 100% 100%;
+}
+.imageOne {
+  background-image: url(../../assets/Feeling-Sick.svg);
+}
+.imageTwo {
+  background-image: url(../../assets/Conserving-Nature.svg);
+}
+.text {
+  padding-bottom: 2rem;
+}
+.text:hover {
+  text-decoration: none;
+  color: #cb997e;
+  transition: ease-in;
+  transition-duration: 0.2s;
+}
+.footer {
+  width: 100%;
+  background-color: #dbdbd1;
+  bottom: 0;
+  position: absolute;
+  display: flex;
+}
