@@ -1,14 +1,16 @@
 import React from 'react';
 import styles from './Search.module.css';
 
-const Search = ({ query, handleOnChange, handleOnPress }) => {
+const Search = ({ query, onInputChange, handleOnPress, search}) => {
+  const handleOnChange = (e) => {
+    onInputChange(e.target.value)
+  }
   return (
-    <div>
+    <div  className={styles.search}>
       <input
         value={query}
         onChange={handleOnChange}
-        placeholder="Search..."
-        className={styles.input}
+        placeholder={search}
         onKeyPress={handleOnPress}
       />
     </div>

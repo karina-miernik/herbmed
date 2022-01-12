@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './Herbs.module.css';
 import PageWrapper from '../PageWrapper/PageWrapper';
 import Search from '../Search/Search';
+import Title from '../Title/Title'
 import axios from 'axios';
 import unsplash from '../../api/unsplash'
 import { DATABASE_URL } from '../../index';
@@ -23,16 +24,16 @@ const renderedResults = results.map(result => {
       <h1>{result.name}</h1>
       <div>{result.description}</div>
       <h3>It heals:</h3>
-      <div>{result.heals}</div>
+      <div>• {result.heals.replaceAll('|', '•')}</div>
       <h3>How it cures?</h3>
-      <dv>{result.cures}</dv>
+      <div>{result.cures}</div>
     </div>
   )
 })
   return (
     <PageWrapper>
-      <div className={styles.title}>Find herbs that heal...</div>
-      <Search />
+      <Title title="Find herbs that heal..."/>
+      <Search search="Search for herbs..."/>
       <div className={styles.herbList}>
     {renderedResults}
         </div>

@@ -1,0 +1,31 @@
+.home {
+  background-color: #fff;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
+  padding-top: 2rem;
+  justify-content: center;
+}
+.title {
+  color: #6b705c;
+  letter-spacing: 0.15rem;
+  font-size: 2rem;
+  text-align: center;
+}
+.list{
+  display: flex;
+  flex-direction: column;
+  padding:5rem;
+}
+.disease{
+  background-color: #fff;
+  margin: 1rem;
+  padding:1rem;
+  border-radius: 0.5rem;
+  justify-content: center;
+  align-content: center;
+  -webkit-box-shadow: 0px 0px 25px -12px rgba(183, 183, 164, 1);
+  -moz-box-shadow: 0px 0px 25px -12px rgba(183, 183, 164, 1);
+  box-shadow: 0px 0px 25px -12px rgba(183, 183, 164, 1);
+}
