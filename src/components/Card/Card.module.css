@@ -1,13 +1,15 @@
-.home {
+.herb{
   background-color: #fff;
-  display: flex;
-  height: 100%;
-  width: 100%;
-  flex-direction: row;
-  padding-top: 2rem;
+  margin: 2rem;
+  padding: 3rem;
+  border-radius: 0.5rem;
   justify-content: center;
+  align-content: center;
+  -webkit-box-shadow: 0px 0px 25px -12px rgba(183, 183, 164, 1);
+  -moz-box-shadow: 0px 0px 25px -12px rgba(183, 183, 164, 1);
+  box-shadow: 0px 0px 25px -12px rgba(183, 183, 164, 1);
 }
-/* .name{
+.name{
   font-size: 3rem;
 }
 .photoContainer{
@@ -23,24 +25,9 @@
   justify-content: flex-end;
   align-items: flex-end;
   border-radius: 50%;
-} */
-.herbList{
-  display: flex;
-  flex-direction: column;
-  padding:5rem;
 }
-/* .herb{
-  background-color: #fff;
-  margin: 2rem;
-  padding: 3rem;
-  border-radius: 0.5rem;
-  justify-content: center;
-  align-content: center;
-  -webkit-box-shadow: 0px 0px 25px -12px rgba(183, 183, 164, 1);
-  -moz-box-shadow: 0px 0px 25px -12px rgba(183, 183, 164, 1);
-  box-shadow: 0px 0px 25px -12px rgba(183, 183, 164, 1);
-} */
-/* .buttonContainer{
+
+.buttonContainer{
   display: flex;
   justify-content: flex-end;
   margin-top: 2rem;
@@ -55,4 +42,4 @@
 }
 .button:hover{
   background-color: #6b705c;
-} */
+}

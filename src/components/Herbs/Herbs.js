@@ -6,6 +6,8 @@ import Title from '../Title/Title'
 import axios from 'axios';
 import unsplash from '../../api/unsplash'
 import { DATABASE_URL } from '../../index';
+import { Link } from 'react-router-dom';
+import Card from '../Card/Card';
 const Herbs = () => {
   const [results, setResults] = useState([]);
   const [text, setText] = useState('')
@@ -20,33 +22,25 @@ const Herbs = () => {
         }, []);
 const renderedResults = results.map(result => {
   return(
-    <div className={styles.herb}>
-      <div className={styles.photoContainer}>
-        <div className={styles.name}>{result.name}</div>
-        <div><img src={result.photo} className={styles.photo} alt="herb image"/></div>
-      </div>
-      <div>{result.description}</div>
-      <h3>It heals:</h3>
-      <div>• {result.heals.replaceAll('|', '•')}</div>
-      <h3>How it cures?</h3>
-      <div>{result.cures.replaceAll('|', '•')}</div>
-    </div>
+    <Card
+      description={result.description}
+      photo={result.photo}
+      name={result.name}
+      heals={result.heals.replaceAll('|', '•')}
+      cures={result.cures.replaceAll('|', '•')}
+    />
   )
 })
 const filteredResult = results.filter(result => result.name.toLowerCase().includes(text.toLowerCase()))
 .map(result => {
   return(
-    <div className={styles.herb}>
-      <div className={styles.photoContainer}>
-        <div className={styles.name}>{result.name}</div>
-        <div><img src={result.photo} className={styles.photo} alt="herb image"/></div>
-      </div>
-      <div>{result.description}</div>
-      <h3>It heals:</h3>
-      <div>• {result.heals.replaceAll('|', '•')}</div>
-      <h3>How it cures?</h3>
-      <div>{result.cures.replaceAll('|', '•')}</div>
-    </div>
+    <Card
+      description={result.description}
+      photo={result.photo}
+      name={result.name}
+      heals={result.heals.replaceAll('|', '•')}
+      cures={result.cures.replaceAll('|', '•')}
+    />
   )
 })
 
@@ -75,7 +69,6 @@ const handleOnInputChange = (text) => {
             {renderedResults}
         </div>
       }
-
     </PageWrapper>
   );
 };
