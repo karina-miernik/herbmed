@@ -4,15 +4,16 @@ import { Link } from "react-router-dom";
 
 const Card = ({ name, description, photo, heals,cures, id, buttonText, linkTo, headerLink, curesText }) => {
   return (
+    
         <div className={styles.herb}>
         <Link to={headerLink} className={styles.link}>
         <div className={styles.photoContainer}>
-          <div className={styles.name}>{name}</div>
           <div><img src={photo} className={styles.photo} alt="herb image"/></div>
+          <div className={styles.name}>{name}</div>
         </div>
         </Link>
         <div>{description}</div>
-        <h3>It heals:</h3>
+        <h3>IT HEALS</h3>
         <div>• {heals}</div>
         <h3>{curesText}</h3>
         <div>{cures}</div>
