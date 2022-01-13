@@ -15,9 +15,11 @@
 }
 .list{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   padding:5rem;
   align-items: center;
+  justify-content: space-evenly;
 }
 .disease{
   background-color: #fff;
@@ -28,7 +30,8 @@
   align-content: center;
   text-align: center;
   text-decoration: none;
-  width: 50%;
+  flex-basis: 30%;
+  width: 60vw;
   cursor: pointer;
   -webkit-box-shadow: 0px 0px 25px -12px rgba(183, 183, 164, 1);
   -moz-box-shadow: 0px 0px 25px -12px rgba(183, 183, 164, 1);
@@ -52,6 +55,7 @@
   color: #6b705c;
   text-decoration: none;
   cursor: pointer;
+  letter-spacing: 0.25rem;
 }
 .link:hover{
   color: #46493c;

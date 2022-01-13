@@ -11,6 +11,7 @@
 .herbList{
   display: flex;
   flex-direction: column;
-  padding:5rem;
   align-items: center;
+  margin: 2rem;
+
 }
