@@ -42,7 +42,7 @@ const Diseases = () => {
     return(
       <div className={styles.disease}>
       <Link to={`diseases/${result}`} className={styles.link}>
-        {result}
+        {result.toUpperCase()}
       </Link>
       </div>
     )
@@ -52,7 +52,7 @@ const Diseases = () => {
     return(
       <div className={styles.disease}>
         <Link to={`diseases/${result}`} className={styles.link}>
-        {result}
+        {result.toUpperCase()}
         </Link>
       </div>
     )
