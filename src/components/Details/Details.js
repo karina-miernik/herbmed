@@ -31,7 +31,7 @@ const Details = () =>{
       id={details.id}
       buttonText="Go Back"
       linkTo={`/herbs`}
-      curesText="How it cures?"
+      curesText="HOW IT CURES?"
       />
     </div>
   : <div></div>
