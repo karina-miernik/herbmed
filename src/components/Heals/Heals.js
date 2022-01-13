@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import styles from './Heals.module.css'
 import Card from '../Card/Card';
+import Title from '../Title/Title'
 import { useParams } from "react-router-dom";
 import { DATABASE_URL } from '../../index';
 import axios from 'axios';
@@ -37,6 +38,7 @@ const Details = () =>{
   })
   const renderedDetails = details
   ?  <div className={styles.details}>
+        <Title title={`Find herbs that will help with ${id}...`}/> 
       {details}
     </div>
   : <div></div>
