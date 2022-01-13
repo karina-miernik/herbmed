@@ -4,10 +4,13 @@ import PageWrapper from '../PageWrapper/PageWrapper';
 import Search from '../Search/Search';
 import Title from '../Title/Title'
 import axios from 'axios';
-import unsplash from '../../api/unsplash'
 import { DATABASE_URL } from '../../index';
+import { Link } from "react-router-dom";
+
+
 const Diseases = () => {
   const [results, setResults] = useState([]);
+  const [data, setData] = useState([])
   const [text, setText] = useState('')
         useEffect(() => {
           const search = async () => {
@@ -15,19 +18,47 @@ const Diseases = () => {
             const d = res.data
             let newA = []
             d.map(e => newA.push(e.heals.split('|')))
-            const mergedArray = newA.concat.apply([], newA)
+            const mergedArray = newA.concat.apply([], newA).filter(e => !!e)
             const uniqueValues = [...new Set(mergedArray)]
-            console.log('unique',uniqueValues)
             setResults(uniqueValues)
           }
           search()
         }, []);
+
+        useEffect(() => {
+          const search = async () => {
+            const res =  await axios.get(`${DATABASE_URL}herbs.json`)
+            setData(Object.keys(res.data).map(key => {
+              return {
+                id: key,
+                ...res.data[key]
+              }
+            }))
+            console.log('d', data)
+          }
+          search()
+        }, []);
   const renderedResults = results.map(result => {
-    console.log(result)
     return(
-      <div className={styles.disease}>{result}</div>
+      <div className={styles.disease}>
+      <Link to={`diseases/${result}`} className={styles.link}>
+        {result}
+      </Link>
+      </div>
     )
   })
+  const filteredResult = results.filter(result => result.toLowerCase().includes(text.toLowerCase()))
+  .map(result => {
+    return(
+      <div className={styles.disease}>
+        <Link to={`diseases/${result}`} className={styles.link}>
+        {result}
+        </Link>
+      </div>
+    )
+  })
+  // const filteredData = data.filter(d => d.heals.includes)
+
   const handleOnInputChange = (text) => {
     setText(text)
   }
@@ -41,16 +72,10 @@ const Diseases = () => {
       />
       {
         text
-        ?  results.filter(result => result.includes(text))
-           .map(result => {
-             return(
-              <div className={styles.list}>
-                <div className={styles.disease}>
-                  {result}
-                </div>
-              </div>
-             )
-           })
+        ? <div className={styles.list}>
+          {filteredResult}  
+          </div>
+          
         : <div className={styles.list}>
         {renderedResults}
         </div>
