@@ -3,7 +3,9 @@ import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
 import Home from '../Home/Home';
 import Herbs from '../Herbs/Herbs';
 import Diseases from '../Diseases/Diseases';
+import Details from '../Details/Details';
 import styles from './Navigation.module.css';
+import Heals from '../Heals/Heals'
 const Navigation = () => {
   return (
     <BrowserRouter>
@@ -28,6 +30,8 @@ const Navigation = () => {
             <Route exact path="/" component={Home} />
             <Route exact path="/herbs" component={Herbs} />
             <Route exact path="/diseases" component={Diseases} />
+            <Route exact path="/herbs/:id" component={Details} />
+            <Route exact path="/diseases/:id" component={Heals} />
           </Switch>
         </div>
       </div>
