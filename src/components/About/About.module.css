@@ -1,0 +1,34 @@
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem 0;
+  border-radius: 1rem;
+  align-items: center;
+}
+.image:hover {
+  transform: translateY(-10px);
+  transition: ease-in;
+  transition-duration: 0.2s;
+}
+.imgae, .containerText{
+  flex:40%;
+}
+.image {
+  display: flex;
+  background-repeat: no-repeat;
+  width: 40vw;
+  height: 30vh;
+  background-size: 100% 100%;
+  border-radius: 0.5rem;
+
+}
+.image {
+  background-image: url(../../assets/02-Nurse.svg);
+}
+.text{
+  letter-spacing: 0.1rem;
+  line-height: 1.5rem;
+}
