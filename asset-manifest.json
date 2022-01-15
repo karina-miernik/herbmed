@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/herbmed/static/css/main.2846ab07.chunk.css",
-    "main.js": "/herbmed/static/js/main.484e4441.chunk.js",
-    "main.js.map": "/herbmed/static/js/main.484e4441.chunk.js.map",
+    "main.css": "/herbmed/static/css/main.a4a05eb6.chunk.css",
+    "main.js": "/herbmed/static/js/main.a9154223.chunk.js",
+    "main.js.map": "/herbmed/static/js/main.a9154223.chunk.js.map",
     "runtime-main.js": "/herbmed/static/js/runtime-main.b49992f4.js",
     "runtime-main.js.map": "/herbmed/static/js/runtime-main.b49992f4.js.map",
-    "static/js/2.3a8c4f15.chunk.js": "/herbmed/static/js/2.3a8c4f15.chunk.js",
-    "static/js/2.3a8c4f15.chunk.js.map": "/herbmed/static/js/2.3a8c4f15.chunk.js.map",
+    "static/js/2.bc957d1f.chunk.js": "/herbmed/static/js/2.bc957d1f.chunk.js",
+    "static/js/2.bc957d1f.chunk.js.map": "/herbmed/static/js/2.bc957d1f.chunk.js.map",
     "index.html": "/herbmed/index.html",
-    "static/css/main.2846ab07.chunk.css.map": "/herbmed/static/css/main.2846ab07.chunk.css.map",
-    "static/js/2.3a8c4f15.chunk.js.LICENSE.txt": "/herbmed/static/js/2.3a8c4f15.chunk.js.LICENSE.txt",
+    "static/css/main.a4a05eb6.chunk.css.map": "/herbmed/static/css/main.a4a05eb6.chunk.css.map",
+    "static/js/2.bc957d1f.chunk.js.LICENSE.txt": "/herbmed/static/js/2.bc957d1f.chunk.js.LICENSE.txt",
     "static/media/About.module.css": "/herbmed/static/media/02-Nurse.38fb5635.svg",
     "static/media/Home.module.css": "/herbmed/static/media/Feeling-Sick.26f0c064.svg",
     "static/media/Navigation.module.css": "/herbmed/static/media/logo-white.35bece1d.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.b49992f4.js",
-    "static/js/2.3a8c4f15.chunk.js",
-    "static/css/main.2846ab07.chunk.css",
-    "static/js/main.484e4441.chunk.js"
+    "static/js/2.bc957d1f.chunk.js",
+    "static/css/main.a4a05eb6.chunk.css",
+    "static/js/main.a9154223.chunk.js"
   ]
 }
