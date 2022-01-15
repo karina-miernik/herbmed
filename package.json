@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.24.0",
     "firebase": "^9.5.0",
+    "gh-pages": "^3.2.3",
     "hamburger-react": "^2.4.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -21,7 +22,10 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
   },
+  "homepage": "https://karina-miernik.github.io/herbmed",
   "scripts": {
+    "predeploy": "npm run build", 
+    "deploy": "gh-pages -d build"
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
