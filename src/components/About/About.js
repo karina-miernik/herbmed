@@ -1,7 +1,5 @@
 import React from 'react';
 import PageWrapper from '../PageWrapper/PageWrapper';
-import Card from '../Card/Card'
-import Title from '../Title/Title'
 import styles from './About.module.css'
 const About = () => {
   return (
@@ -9,20 +7,15 @@ const About = () => {
       <div className={styles.container}>
         <div className={styles.image} />
         <div className={styles.containerText}>
-        <Title title="Caution"/>
-        <div className={styles.text}>Lorem</div>
+        <div className={styles.titleAbout}>Caution</div>
+        
+        <div className={styles.text}>
+          <p>This app was created for learning and entertainment purposes. Information presented here is either from the Internet or books dedicated to herbs.</p>
+          <p>I don't take a resposibility for medical advice presented over here.</p>  
         </div>
-
+        </div>
       </div>
-      {/* <Card
-      photo={result.photo}
-      name={result.name}
-      heals={result.heals.replaceAll('|', '•')}
-      id = {results.id}
-      buttonText="More"
-      linkTo={`/herbs/${result.name}`}
-      headerLink={`/herbs/${result.name}`}
-    /> */}
+
     </PageWrapper>
   );
 };
