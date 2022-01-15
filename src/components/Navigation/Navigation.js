@@ -49,6 +49,7 @@ const Navigation = () => {
         <div>
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route exact path="/herbmed" component={Home} />
             <Route exact path="/herbs" component={Herbs} />
             <Route exact path="/diseases" component={Diseases} />
             <Route exact path="/about" component={About} />
