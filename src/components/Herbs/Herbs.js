@@ -30,7 +30,7 @@ const renderedResults = results.map(result => {
       name={result.name}
       heals={result.heals.replaceAll('|', '•')}
       id={result.name}
-      buttonText="Learn More"
+      buttonText="More"
       linkTo={`/herbs/${result.name}`}
       headerLink={`/herbs/${result.name}`}
     />
@@ -44,7 +44,7 @@ const filteredResult = results.filter(result => result.name.toLowerCase().includ
       name={result.name}
       heals={result.heals.replaceAll('|', '•')}
       id = {results.id}
-      buttonText="Learn More"
+      buttonText="More"
       linkTo={`/herbs/${result.name}`}
       headerLink={`/herbs/${result.name}`}
     />

@@ -6,8 +6,8 @@ import Title from '../Title/Title'
 import axios from 'axios';
 import { DATABASE_URL } from '../../index';
 import { Link } from "react-router-dom";
-
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeartbeat } from '@fortawesome/free-solid-svg-icons'
 const Diseases = () => {
   const [results, setResults] = useState([]);
   const [data, setData] = useState([])
@@ -42,8 +42,11 @@ const Diseases = () => {
     return(
       <div className={styles.disease}>
       <Link to={`diseases/${result}`} className={styles.link}>
-        {result.toUpperCase()}
+        {result.toUpperCase()} 
+        <FontAwesomeIcon icon={faHeartbeat} />
+
       </Link>
+      
       </div>
     )
   })

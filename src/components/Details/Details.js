@@ -20,6 +20,7 @@ const Details = () =>{
     search()
   }, []);
   const details = result.filter(result => result.name === id)[0]
+
   const renderedDetails = details
   ?  <div className={styles.details}>
       <Card
@@ -27,7 +28,7 @@ const Details = () =>{
       photo={details.photo}
       name={details.name}
       heals={details.heals.replaceAll('|', '•')}
-      cures={details.cures.replaceAll('|', '•')}
+      cures={details.cures.split('|').map(e => <p>{e}</p>)}
       id={details.id}
       buttonText="Go Back"
       linkTo={`/herbs`}

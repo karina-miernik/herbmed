@@ -12,11 +12,11 @@ const Card = ({ name, description, photo, heals,cures, id, buttonText, linkTo, h
           <div className={styles.name}>{name}</div>
         </div>
         </Link>
-        <div>{description}</div>
+        <div className={styles.text}>{description}</div>
         <h3>IT HEALS</h3>
-        <div>• {heals}</div>
+        <div className={styles.text}>• {heals}</div>
         <h3>{curesText}</h3>
-        <div>{cures}</div>
+        <div className={styles.text}>{cures}</div>
         <div className={styles.buttonContainer}>
           <Link to={linkTo} className={styles.link}>
             <button className={styles.button}>{buttonText}</button>

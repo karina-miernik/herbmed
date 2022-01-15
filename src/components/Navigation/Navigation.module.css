@@ -1,6 +1,17 @@
 
-body {
+*,
+*:after,
+*:before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html, body {
   width: 100%;
+  height:100%;
+}
+body{
+  font-family: 'Roboto', serif;
 }
 .nav {
   top: 0;
@@ -8,6 +19,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   width: 100%;
   height: 10vh;
   box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, 0.23);
@@ -33,7 +45,7 @@ body {
 .link {
   width: calc(30vw - 2rem);
 } */
-.link {
+.link{
   padding: 1rem;
   text-transform: uppercase;
   text-decoration: none;
@@ -56,8 +68,38 @@ body {
   background-repeat: no-repeat;
   width: 30vw;
 }
-.logo:hover {
+.logo:hover, .hamburger-react {
   background-image: url(../../assets/logo-green.svg);
   transition: ease-in;
   transition-duration: 0.2s;
+}
+.menuOpen{
+  position: absolute;
+  top:10%;
+  right:0;
+  width:100vw;
+  height:90%;
+  background-color: rgba(221, 190, 169, 0.9);
+  justify-content: flex-start;
+  text-align: center;
+  font-size: 1.5rem;
+  display: flex;
+  padding-top: 5rem;
+  padding-right: 2rem;
+  flex-direction: column;
+  text-align: end;
+  flex-grow:1;
+  transition: all 0.4s ease-in;
+  -webkit-clip-path: circle(80.7% at 89% 24%);
+}
+.menuClosed{
+  -webkit-clip-path:circle(10px at 90% -10%);
+  position: absolute;
+  top:10%;
+  width:50vw;
+  background-color: rgba(221, 190, 169, 1);
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
 }
