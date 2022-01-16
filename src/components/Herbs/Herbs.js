@@ -31,8 +31,8 @@ const renderedResults = results.map(result => {
       heals={result.heals.replaceAll('|', '•')}
       id={result.name}
       buttonText="More"
-      linkTo={`/herbs/${result.name}`}
-      headerLink={`/herbs/${result.name}`}
+      linkTo={`/herbmed/herbs/${result.name}`}
+      headerLink={`/herbmed/herbs/${result.name}`}
     />
   )
 })
@@ -45,8 +45,8 @@ const filteredResult = results.filter(result => result.name.toLowerCase().includ
       heals={result.heals.replaceAll('|', '•')}
       id = {results.id}
       buttonText="More"
-      linkTo={`/herbs/${result.name}`}
-      headerLink={`/herbs/${result.name}`}
+      linkTo={`/herbmed/herbs/${result.name}`}
+      headerLink={`/herbmed/herbs/${result.name}`}
     />
   )
 })

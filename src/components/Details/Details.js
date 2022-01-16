@@ -31,7 +31,7 @@ const Details = () =>{
       cures={details.cures.split('|').map(e => <p>{e}</p>)}
       id={details.id}
       buttonText="Go Back"
-      linkTo={`/herbs`}
+      linkTo={`/herbmed/herbs`}
       curesText="HOW IT CURES?"
       />
     </div>

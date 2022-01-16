@@ -8,19 +8,18 @@ const Home = () => {
       <div className={styles.title}>Find herbs that heal...</div>
       <div className={styles.home}>
         <div className={styles.container}>
-          <Link to="/diseases" className={styles.titleTwo}>
+          <Link to="/herbmed/diseases" className={styles.titleTwo}>
             <div className={styles.imageOne} />
             <div className={styles.text}>Diseases</div>
           </Link>
         </div>
         <div className={styles.container}>
-          <Link to="/herbs" className={styles.titleTwo}>
+          <Link to="/herbmed/herbs" className={styles.titleTwo}>
             <div className={styles.imageTwo}></div>
             <div className={styles.text}>Herbs</div>
           </Link>
         </div>
       </div>
-      {/* <div className={styles.footer}>Footer</div> */}
     </PageWrapper>
   );
 };

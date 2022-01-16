@@ -31,7 +31,7 @@ const Details = () =>{
       cures={details.cures.replaceAll('|', '•')}
       id={details.id}
       buttonText="Go Back"
-      linkTo={`/diseases`}
+      linkTo={`/herbmed/diseases`}
       curesText="How it cures?"
       />)
 

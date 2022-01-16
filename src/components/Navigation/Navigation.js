@@ -15,7 +15,7 @@ const Navigation = () => {
       <div>
         <nav className={styles.nav}>
           <div className={styles.containerOne}>
-            <Link to="/">
+            <Link to="/herbmed">
               <div className={styles.logo} />
             </Link>
           </div>
@@ -29,13 +29,13 @@ const Navigation = () => {
             {
               isOpen  ?
               <div className={styles.menuOpen} >
-              <Link to="/diseases" className={styles.link}>
+              <Link to="/herbmed/diseases" className={styles.link}>
               diseases
               </Link>
-              <Link to="/herbs" className={styles.link}>
+              <Link to="/herbmed/herbs" className={styles.link}>
               herbs
               </Link>
-              <Link to="/about" className={styles.link}>
+              <Link to="/herbmed/about" className={styles.link}>
               about
               </Link>
             </div>
@@ -48,13 +48,12 @@ const Navigation = () => {
         </nav>
         <div>
           <Switch>
-            <Route exact path="/" component={Home} />
             <Route exact path="/herbmed" component={Home} />
-            <Route exact path="/herbs" component={Herbs} />
-            <Route exact path="/diseases" component={Diseases} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/herbs/:id" component={Details} />
-            <Route exact path="/diseases/:id" component={Heals} />
+            <Route exact path="/herbmed/herbs" component={Herbs} />
+            <Route exact path="/herbmed/diseases" component={Diseases} />
+            <Route exact path="/herbmed/about" component={About} />
+            <Route exact path="/herbmed/herbs/:id" component={Details} />
+            <Route exact path="/herbmed/diseases/:id" component={Heals} />
           </Switch>
         </div>
       </div>

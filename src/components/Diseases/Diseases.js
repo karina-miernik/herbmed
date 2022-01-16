@@ -34,7 +34,6 @@ const Diseases = () => {
                 ...res.data[key]
               }
             }))
-            console.log('d', data)
           }
           search()
         }, []);
